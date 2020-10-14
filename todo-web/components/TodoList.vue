@@ -11,6 +11,7 @@
 
 <script>
 export default {
+  props: ["todos"],
   data() {
     return {
       todos: [

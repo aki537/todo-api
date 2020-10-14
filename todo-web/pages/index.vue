@@ -1,7 +1,7 @@
 <template>
   <div>
-    <AddTodo />
-    <TodoList />
+    <AddTodo @submit="addTodo" />
+    <TodoList :todos="todos"/>
   </div>
 </template>
 
