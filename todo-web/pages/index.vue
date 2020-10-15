@@ -1,7 +1,7 @@
 <template>
   <div>
     <AddTodo @submit="addTodo" />
-    <TodoList :todos="todos"/>
+    <TodoList :todos="todos" />
   </div>
 </template>
 
@@ -14,12 +14,19 @@ export default {
     AddTodo,
     TodoList
   },
-  data(){
+  data() {
     return {
       todos: []
     }
+  },
+  mehotds: {
+    addTodo(title) {
+      this.todos.push({
+        title
+      });
+    }
   }
-}
+};
 </script>
 
 <style>
