@@ -6,28 +6,27 @@
 </template>
 
 <script>
-import AddTodo from '@/components/AddTodo'
-import TodoList from '@/components/TodoList'
+import AddTodo from "@/components/AddTodo"
+import TodoList from "@/components/TodoList"
 
 export default {
   components: {
     AddTodo,
-    TodoList
+    TodoList,
   },
   data() {
     return {
-      todos: []
+      todos: [],
     }
   },
   mehotds: {
     addTodo(title) {
       this.todos.push({
-        title
-      });
-    }
-  }
-};
+        title,
+      })
+    },
+  },
+}
 </script>
 
-<style>
-</style>
+<style></style>
