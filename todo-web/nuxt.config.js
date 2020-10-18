@@ -1,10 +1,10 @@
 import colors from "vuetify/es5/util/colors"
 
-require('dotenv').config(); // <- 追加
+require("dotenv").config() // <- 追加
 export default {
   // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
   ssr: false,
-  mode: 'spa',
+  mode: "spa",
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
@@ -33,7 +33,7 @@ export default {
     "@nuxtjs/eslint-module",
     // https://go.nuxtjs.dev/vuetify
     "@nuxtjs/vuetify",
-    "@nuxtjs/dotenv"
+    "@nuxtjs/dotenv",
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -66,5 +66,4 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
-  
 }

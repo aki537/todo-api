@@ -14,13 +14,13 @@ export default {
     AddTodo,
     TodoList,
   },
-  created() {
-      console.log("API_KEY:", process.env.API_KEY); //これを追加
-  },
   data() {
     return {
       todos: [],
     }
+  },
+  created() {
+    console.log("API_KEY:", process.env.API_KEY) // これを追加
   },
   mehotds: {
     addTodo(title) {
