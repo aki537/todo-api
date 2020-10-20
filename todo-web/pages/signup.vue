@@ -45,6 +45,8 @@
 </template>
 <script>
 import firebase from "@/plugins/firebase"
+import axios from "@plugins/axios" //追加
+
 export default {
   data() {
     return {
@@ -64,10 +66,22 @@ export default {
       }
       firebase
         .auth()
-        .createUserWithEmailAndPassword(this.email, this.password)
-        .then((res) => {
-          console.log(res.user)
-        })
+          .createUserWithEmailAndPassword(this.email, this.password)
+            .then(res => {
+                const user = {
+                  email: res.user.email,
+                  name: this.name,
+                  uid: res.user.uid
+                };
+                axios.post("/v1/users",{ user }).then(() => {
+                  this.$router.push("/");
+                });
+            })
+        // .auth()
+        // .createUserWithEmailAndPassword(this.email, this.password)
+        // .then((res) => {
+        //   console.log(res.user)
+        // })
         .catch((error) => {
           this.error = ((code) => {
             switch (code) {
